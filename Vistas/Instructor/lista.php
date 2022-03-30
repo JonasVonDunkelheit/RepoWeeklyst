@@ -17,12 +17,16 @@
     <?php
         include ('../../bd/conexion.php');
         //Select
-        $sql="select * from usuario where id_rol=2";        
+        $numFicha=$_POST['num_ficha'];
+
+        $sql="select * from usuario where id_ficha='".$numFicha."'";
+        
         $resultado=mysqli_query($conexion,$sql);
+        
     ?>
     <div class="contain">
         <div class="cont">            
-            <div class="back"><a href="verFichas.php"><i class="fa-solid fa-circle-arrow-left"></i> Regresar</a></div>
+            <div class="back"><a href="preficha.php"><i class="fa-solid fa-circle-arrow-left"></i> Regresar</a></div>
             <div><h2>Lista</h2></div>
         </div>
         <table>
@@ -32,11 +36,15 @@
             </thead>
             <tbody>
                 <?php
-                    while($filas=mysqli_fetch_assoc($resultado)){                    
+                    while($filas=mysqli_fetch_assoc($resultado)){    
                 ?>
-                <form action="asistencia.php" method="post">
+                <form action="listaprepare.php" method="post">
+                    <?php
+                        $sql1="select * from fichas where id_ficha";
+                        $resultado1=mysqli_query($conexion,$sql1);
+                    ?>
                 <tr>                    
-                    <td><?php echo $filas['apellido']?> <?php echo $filas['nombre']?></td>
+                    <td><input type="hidden" value="<?php echo $filas['apellido']?> <?php echo $filas['nombre']?>" name="nombre"><?php echo $filas['apellido']?> <?php echo $filas['nombre']?></td>
                     <td><select name="asistencia">
                         <option value="1">Asistencia</option>
                         <option value="2">Falla</option>
@@ -46,14 +54,12 @@
                     }
                 ?>
                 <tr>
-                    <td colspan=2><input type="submit" value="Guardar"></td>
+                    <td colspan=2><input type="submit" name="btn" value="Guardar"></td>
                 </tr>
                 </form>                
             </tbody>
         </table>
-        <?php 
-            mysqli_close($conexion);
-        ?>
+        
     </div>
     <footer>
         Todos los derechos reservados - ©Weeklyst 2020

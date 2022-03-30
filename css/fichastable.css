@@ -37,3 +37,20 @@ table a:hover{
     color: #224fca;
     font-weight: bold;
 }
+
+select{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    width: 60%;
+    border: none;
+    background-color: #333;
+    color: #999;
+}
+
+select option{
+    background: #1a1919;
+    color: #eee;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

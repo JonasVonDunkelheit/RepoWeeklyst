@@ -21,7 +21,7 @@
             <p class="pf">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui voluptates atque vero harum explicabo doloribus deserunt eveniet nulla iusto porro nemo, voluptatum ab commodi velit. Quos quas repellendus fugit quis!</p><br>
         </div>
         <div class="addF">
-            <a href="agregarFicha.php"><div><label><i class="fa-solid fa-thumbtack"></i> Fijar una Ficha</label></div></a>
+            <a href="fijarFicha.php"><div><label><i class="fa-solid fa-thumbtack"></i> Fijar una Ficha</label></div></a>
             <br>
             <p class="pf">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui voluptates atque vero harum explicabo doloribus deserunt eveniet nulla iusto porro nemo, voluptatum ab commodi velit. Quos quas repellendus fugit quis!</p><br>
         </div>

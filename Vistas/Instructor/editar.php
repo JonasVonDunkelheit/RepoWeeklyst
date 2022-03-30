@@ -33,7 +33,7 @@
                       alert('Los datos fueron actualizados correctamente');
                       location.assign('agregarFicha.php');</script>";
               }else {
-                echo "string";"<script languaje='javascript'>
+                echo "<script languaje='javascript'>
                       alert('Los datos NO fueron actualizados correctamente');
                       location.assign('agregarFicha.php');</script>";
               }
