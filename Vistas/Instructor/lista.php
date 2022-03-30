@@ -12,7 +12,13 @@
 </head>
 <body>
     <?php 
-        include '../navbaruser.php'; 
+        include '../navbaruser.php';                
+    ?>
+    <?php
+        include ('../../bd/conexion.php');
+        //Select
+        $sql="select * from usuario where id_rol=2";        
+        $resultado=mysqli_query($conexion,$sql);
     ?>
     <div class="contain">
         <div class="cont">            
@@ -25,28 +31,29 @@
                 <th>Asistencia</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>Pepito Juarez</td>
-                    <td><a href="#" class="check"><i class="fa-solid fa-square-check"></i></a><a href="#" class="fail"><i class="fa-solid fa-square-xmark"></i></a></td>
+                <?php
+                    while($filas=mysqli_fetch_assoc($resultado)){                    
+                ?>
+                <form action="asistencia.php" method="post">
+                <tr>                    
+                    <td><?php echo $filas['apellido']?> <?php echo $filas['nombre']?></td>
+                    <td><select name="asistencia">
+                        <option value="1">Asistencia</option>
+                        <option value="2">Falla</option>
+                    </select></td>
                 </tr>
+                <?php 
+                    }
+                ?>
                 <tr>
-                    <td>Juanito Martinez</td>
-                    <td><a href="#" class="check"><i class="fa-solid fa-square-check"></i></a><a href="#" class="fail"><i class="fa-solid fa-square-xmark"></i></a></td>
+                    <td colspan=2><input type="submit" value="Guardar"></td>
                 </tr>
-                <tr>
-                    <td>Bryan Díaz</td>
-                    <td><a href="#" class="check"><i class="fa-solid fa-square-check"></i></a><a href="#" class="fail"><i class="fa-solid fa-square-xmark"></i></a></td>
-                </tr>
-                <tr>
-                    <td>Juliana Gómez</td>
-                    <td><a href="#" class="check"><i class="fa-solid fa-square-check"></i></a><a href="#" class="fail"><i class="fa-solid fa-square-xmark"></i></a></td>
-                </tr>
-                <tr>
-                    <td>Pedro Sánchez</td>
-                    <td><a href="#" class="check"><i class="fa-solid fa-square-check"></i></a><a href="#" class="fail"><i class="fa-solid fa-square-xmark"></i></a></td>
-                </tr>
+                </form>                
             </tbody>
         </table>
+        <?php 
+            mysqli_close($conexion);
+        ?>
     </div>
     <footer>
         Todos los derechos reservados - ©Weeklyst 2020

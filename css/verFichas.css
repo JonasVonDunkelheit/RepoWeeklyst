@@ -57,6 +57,10 @@ table td{
     width: 50%;
 }
 
+.col{
+    width: 25%;
+}
+
 table a{
     text-decoration: none;
     color: #000;

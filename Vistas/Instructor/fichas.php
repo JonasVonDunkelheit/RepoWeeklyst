@@ -12,7 +12,11 @@
 </head>
 <body>
     <?php 
-        include '../navbaruser.php'; 
+        include '../navbaruser.php';
+        //Select
+        include ('../../bd/conexion.php');
+        $sql="select * from usuario where id_usuario";    
+        $resultado=mysqli_query($conexion,$sql);
     ?>
     <div class="container">
         <div class="fichas">
@@ -20,11 +24,17 @@
             <br>            
             <p class="pf">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui voluptates atque vero harum explicabo doloribus deserunt eveniet nulla iusto porro nemo, voluptatum ab commodi velit. Quos quas repellendus fugit quis!</p><br>
         </div>
+        <?php
+            if($filas=mysqli_fetch_assoc($resultado)){                    
+        ?>
         <div class="addF">
             <a href="agregarFicha.php"><div><label><i class="fa-solid fa-folder-plus"></i> Agregar Ficha</label></div></a>
             <br>
             <p class="pf">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui voluptates atque vero harum explicabo doloribus deserunt eveniet nulla iusto porro nemo, voluptatum ab commodi velit. Quos quas repellendus fugit quis!</p><br>
         </div>
+        <?php
+            }
+        ?>
     </div>
     <footer>
         Todos los derechos reservados - ©Weeklyst 2020

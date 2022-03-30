@@ -14,31 +14,39 @@
     <?php 
         include '../navbaruser.php'; 
     ?>
+    <?php
+        include ('../../bd/conexion.php');
+        //Select
+        $sql="select * from fichas";        
+        $resultado=mysqli_query($conexion,$sql);
+    ?>
     <div class="contain">
         <div class="cont">            
-            <div class="back"><a href="fichas.php"><i class="fa-solid fa-circle-arrow-left"></i> Regresar</a></div>
-            <div><h2>Fichas</h2></div>
+            <div class="back"><a href="verFichas.php"><i class="fa-solid fa-circle-arrow-left"></i> Regresar</a></div>
+            <div><h2>Lista</h2></div>
         </div>
         <table>
             <thead>
-                <th>Número de Ficha</th>
-                <th>Programa de Formación</th>
+                <th>Nombre del programa</th>
+                <th colspan=2>Número de ficha</th>
             </thead>
             <tbody>
-                <tr>
-                    <td><a href="#">2141041 <i class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
-                    <td>ADSI</td>
+                <?php
+                    while($filas=mysqli_fetch_assoc($resultado)){                    
+                ?>
+                <tr>                    
+                    <td><?php echo $filas['nombre_programa']?></td>
+                    <td class="col"><?php echo $filas['num_ficha']?></td>
+                    <td class="col"><?php echo "<a href='lista.php?id=".$filas['id_ficha']."'><i class='fa-solid fa-arrow-up-right-from-square'></i> Ver lista</a>"; ?></td>
                 </tr>
-                <tr>
-                    <td><a href="lista.php">2251038 <i class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
-                    <td>ADSI</td>
-                </tr>
-                <tr>
-                    <td><a href="#">3014001 <i class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
-                    <td>ADSI</td>
-                </tr>
+                <?php 
+                    }
+                ?>
             </tbody>
         </table>
+        <?php 
+            mysqli_close($conexion);
+        ?>
     </div>
     <footer>
         Todos los derechos reservados - ©Weeklyst 2020

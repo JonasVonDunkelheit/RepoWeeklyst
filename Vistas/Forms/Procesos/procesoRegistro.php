@@ -15,16 +15,15 @@
     }*/
     
     if(@$_POST['btn']){
-        $nombre = $_POST["nombre"];
-        $apellido = $_POST["apellidos"];
-        $tipo_docu = $_POST["tipo_docu"];
-        $num_docu = $_POST["num_docu"];
-        $rol = $_POST["roles"];
-        $correo = $_POST["correo"];
-        $pass = $_POST["pass"];
+      $nombre = $_POST["nombre"];
+      $apellido = $_POST["apellidos"];
+      $tipo_docu = $_POST["tipo_docu"];
+      $num_docu = $_POST["num_docu"];
+      $rol = $_POST["roles"];
+      $correo = $_POST["correo"];
+      $pass = $_POST["pass"];
 
-
-        $insert = "INSERT INTO usuario (nombre,apellido,tipo_docu,num_docu,id_rol,correo,password) VALUES('$nombre','$apellido','$tipo_docu','$num_docu','$rol','$correo','$pass')";
-        mysqli_query($conexion,$insert);
-    }    
+      $insert = "INSERT INTO usuario (nombre,apellido,tipo_docu,num_docu,id_rol,correo,password) VALUES('$nombre','$apellido','$tipo_docu','$num_docu','$rol','$correo','$pass')";
+      mysqli_query($conexion,$insert);
+    }   
 ?>

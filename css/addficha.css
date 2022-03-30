@@ -1,7 +1,7 @@
 .contain{
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 10px;    
     background: rgba(151, 151, 151, 0.637);
     border-radius: 20px;
 }
