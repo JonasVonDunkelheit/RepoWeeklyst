@@ -162,35 +162,36 @@
   width: 260px;
   height: 270px;
   margin:10px auto;
-	 display:block;
+  display:block;
 
 }
 /*Contenido de imagenes*/
  .container__card{
+  width:90%;
   margin: 0 auto;
   align-items: center;
-  display: flex;
-   width:90%;
- 
+  display: flex; 
 }
 
 .card{
   background: rgba(151, 151, 151, 0.637);
   color: #eee;
-  width: 300px;
+  width: 20%;
   padding: 20px;
-  margin: 40px 50px;
+  margin: 0 auto;
   font-family: 'Times New Roman', Times, serif;
   transition: all 400ms cubic-bezier(0.5,0,0,1);
   border-radius: 20px;
   box-shadow: 0 0 70px #1667aa;
- top: 20px;
- height:400px;
- 
+  top: 20px;
+  height:400px;
+  contain: content;
 }
 .card p{
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size:medium;
+  width: 90%;
+  margin: 0 auto;
 }
 .card:hover{
   box-shadow: 1px 1px 20px -10px #ffffff;

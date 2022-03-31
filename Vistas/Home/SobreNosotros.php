@@ -77,7 +77,7 @@
         <div class="info__description">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nihil dolore doloremque illo sit expedita
-                quaerat porro et voluptas corporis laudantium amet accusamus, enim nemo iusto dolores magni tempora sed?
+                quaerat porro et voluptas
             </p>
            
         </div>
@@ -89,8 +89,8 @@
         </div>
         <div class="info__description">
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate quisquam numquam eum, corrupti nam
-                illum nobis doloremque, aperiam aliquid consequatur dolore cum voluptatem perferendis! Ratione 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nihil dolore doloremque illo sit expedita
+                quaerat porro et voluptas
             </p>
      
         </div>
@@ -101,9 +101,8 @@
         </div>
         <div class="info__description">
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi hic earum atque excepturi cum sed,
-                ratione nemo neque deserunt sapiente molestias dolor culpa similique blanditiis cumque dolore velit. Dolore,
-                minus!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nihil dolore doloremque illo sit expedita
+                quaerat porro et voluptas
             </p>
           
         </div>
@@ -114,12 +113,9 @@
         </div>
         <div class="info__description">
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam corrupti distinctio obcaecati ad esse
-                consectetur, saepe placeat repudiandae. Enim minus natus quaerat maiores harum rerum officia, tempora fuga
-                molestiae! Iusto!
-                
-            </p>
-            
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nihil dolore doloremque illo sit expedita
+                quaerat porro et voluptas                
+            </p>            
         </div>
     </div>
 
