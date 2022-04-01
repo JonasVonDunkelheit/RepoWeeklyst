@@ -18,19 +18,20 @@
 
     $nombre=$_POST['nombre'];
     $registro=$_POST['asistencia'];
+    $fecha=date('Y-m-d');
 
-    $insert = "INSERT INTO lista(aprendiz,registro) VALUES";
+    $insert = "INSERT INTO lista(aprendiz,registro,fecha) VALUES";
 
     for($i=0;$i<count($nombre);$i++){
-      $insert.="('".$nombre[$i]."', '".$registro[$i]."'),";
+      $insert.="('".$nombre[$i]."', '".$registro[$i]."', '".$fecha."'),";
     }
-    var_dump($insert);
+    
     $insert_final=substr($insert,0,-1);
     
-    var_dump($insert_final);
+    
 
     $conect = mysqli_query($conexion,$insert_final);    
-    var_dump($conect);
+    
 
  
       if($conect){
