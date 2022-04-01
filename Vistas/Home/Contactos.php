@@ -32,8 +32,8 @@
         <label for="">Email:</label><br>
         <input id="email" name="email" type="email" placeholder="ejemplo@email.com"><br>
        
-        <label for="">Tefono :</label><br>
-        <input id="tel" name="tel" type="tel" placeholder="numero"><br>
+        <label for="">Teléfono:</label><br>
+        <input id="tel" name="tel" type="tel" placeholder="5555555555"><br>
             <input type="submit" value="Enviar datos"><br>
             </form>
     <footer>

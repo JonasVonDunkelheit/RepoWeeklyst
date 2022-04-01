@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php 
-        include '../navbaruser.php'; 
+        include '../navbaraprendiz.php'; 
     ?>
     <?php
         include ('../../bd/conexion.php');

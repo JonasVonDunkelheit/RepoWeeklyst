@@ -11,11 +11,11 @@
         if($resultado){
           echo "<script languaje='javascript'>
                 alert('Los datos fueron ingresados correctamente');
-                location.assign('../fijarFicha.php');</script>";
+                location.assign('../agregarFicha.php');</script>";
         }else {
           echo "string";"<script languaje='javascript'>
                 alert('Los datos NO fueron ingresados correctamente');
-                location.assign('../fijarFicha.php');</script>";
+                location.assign('../agregarFicha.php');</script>";
         }
         
         mysqli_close($conexion);

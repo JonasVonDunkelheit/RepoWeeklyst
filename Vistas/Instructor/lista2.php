@@ -15,13 +15,7 @@
         include '../navbaruser.php';                
     ?>
     <?php
-        include ('../../bd/conexion.php');
-        //Select
-        $numFicha=$_POST['num_ficha'];
-
-        $sql="select * from usuario where id_ficha='".$numFicha."'";
-        
-        $resultado=mysqli_query($conexion,$sql);
+        include ('../../bd/conexion.php');        
         
     ?>
     <div class="contain">
@@ -35,26 +29,22 @@
                 <th>Asistencia</th>
             </thead>
             <tbody>
-                <?php                    
-                    while($filas=mysqli_fetch_assoc($resultado)){
-                    for($i=0;$i<=0;$i++){
+                <?php
+                    while($filas=mysqli_fetch_assoc($resultado)){    
                 ?>
                 <form action="listaprepare.php" method="post">
                     <?php
                         $sql1="select * from fichas where id_ficha";
                         $resultado1=mysqli_query($conexion,$sql1);
-                        
                     ?>
-                    
                 <tr>                    
-                    <td><input type="hidden" value="<?php echo $filas['apellido']?> <?php echo $filas['nombre']?>" required name="nombre[]"><?php echo $filas['apellido']?> <?php echo $filas['nombre']?></td>
-                    <td><select required name="asistencia[]">
-                        <option value="Asiste">Asistencia</option>
-                        <option value="Falla">Falla</option>
+                    <td><input type="hidden" value="<?php echo $filas['apellido']?> <?php echo $filas['nombre']?>" name="nombre[]"><?php echo $filas['apellido']?> <?php echo $filas['nombre']?></td>
+                    <td><select name="asistencia">
+                        <option value="1">Asistencia</option>
+                        <option value="2">Falla</option>
                     </select></td>
                 </tr>
                 <?php 
-                    }
                     }
                 ?>
                 <tr>
@@ -63,12 +53,10 @@
                 </form>                
             </tbody>
         </table>
-
+        
     </div>
     <footer>
         Todos los derechos reservados - ©Weeklyst 2020
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="../../js/main.js"></script>
 </body>
 </html>

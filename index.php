@@ -17,8 +17,8 @@
             <div class="izq">
                 <ul>
                     <li><a href="index.php">Inicio</a></li>
-                    <li><a href="#">Sobre nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="Vistas/Home/Sobrenosotros.php">Sobre nosotros</a></li>
+                    <li><a href="Vistas/Home/Contactos.php">Contacto</a></li>
                 </ul>
             </div>
             <div class="der">

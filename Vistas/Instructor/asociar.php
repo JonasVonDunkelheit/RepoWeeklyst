@@ -29,7 +29,7 @@
     <div class="contain">
         <div>
             <form action="Procesos/fijar.php" method="post">
-            <div class="back"><a href="fichas.php"><i class="fa-solid fa-circle-arrow-left"></i> Regresar</a>
+            <div class="back"><a href="instructor.php"><i class="fa-solid fa-circle-arrow-left"></i> Regresar</a>
             <label for="" class="title">Asociar una Ficha</label></div><br><br>
             <label for="">Número de Ficha</label><br>
                 <select name="num_ficha">
